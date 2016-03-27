@@ -33,9 +33,9 @@ net min-home-a => axis.3.home-sw-in
 net min-home-a => axis.3.neg-lim-sw-in
 
 ######################
-net MDI-mode              halui.mode.is-mdi
+#net MDI-mode              halui.mode.is-mdi
 
-net set0		halui.mdi-command-00 <= pyvcp.Spindle_empty
+#net set0		halui.mdi-command-00 <= pyvcp.Spindle_empty
 
 ################################################################################
 
