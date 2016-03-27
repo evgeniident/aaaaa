@@ -30,7 +30,7 @@
 				
 				<label>
 					<text>" Limit"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 
@@ -40,7 +40,7 @@
 				
 				<label>
 					<text>" Home"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 		</hbox>	
@@ -68,7 +68,7 @@
 				
 				<label>
 					<text>" Limit"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 				
@@ -78,7 +78,7 @@
 				
 				<label>
 					<text>" Home"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 		</hbox>	
@@ -106,7 +106,7 @@
 				
 				<label>
 					<text>" Limit"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 		</hbox>
@@ -115,7 +115,7 @@
 				
 				<label>
 					<text>" Home"</text>
-					<font>("Helvetica",14)</font>
+					<font>("Helvetica",12)</font>
 			
 				</label>
 		</hbox>	
@@ -153,14 +153,14 @@
 			<led halpin="probe-in-led" on_color="yellow" off_color="black" />
 			<label>
 					<text>"Tool Probe"</text>
-					<font>("Helvetica",14)</font>	
+					<font>("Helvetica",12)</font>	
 			</label>
 
 							<hbox>
 								<led halpin="spindle-on-led" on_color="yellow" off_color="black" />
 								<label>
 										<text>"Spindle ON"</text>
-										<font>("Helvetica",14)</font>	
+										<font>("Helvetica",12)</font>	
 								</label>
 							</hbox>
 
@@ -174,14 +174,14 @@
 			<led halpin="tool-lock-led" on_color="yellow" off_color="black" />
 			<label>
 					<text>"Tool Lock"</text>
-					<font>("Helvetica",14)</font>	
+					<font>("Helvetica",12)</font>	
 			</label>
 
 								<hbox>
 									<led halpin="spindle-clean-air-led" on_color="yellow" off_color="black" />
 									<label>
 											<text>"Spindle-clean-air"</text>
-											<font>("Helvetica",14)</font>	
+											<font>("Helvetica",12)</font>	
 									</label>
 								</hbox>
 
@@ -204,14 +204,14 @@
 			<button>
 				<halpin>"set-tool-length"</halpin>
 				<text>"Tool-Length"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 	
 			<button>
 				<halpin>"set-ngc"</halpin>
 				<text>"NGC-File"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 		</vbox> 
@@ -219,14 +219,14 @@
 			<button>
 				<halpin>"position_off"</halpin>
 				<text>"Position_OFF"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 	
 			<button>
 				<halpin>"set-position-save"</halpin>
 				<text>"Position-Save"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 		</vbox> 
@@ -235,7 +235,7 @@
 			<button>
 				<halpin>"position_start"</halpin>
 				<text>"Position_START"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 	
@@ -302,27 +302,27 @@
 	<hbox>
 				<label>
 					<text>"                "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 
 	<vbox>
 		<button>
 			<halpin>"set-neg-y"</halpin>
 			<text>" -Y"</text>
-			<font>("Helvetica",14)</font>
+			<font>("Helvetica",12)</font>
 			<justify>"center"</justify>
 		</button>
 	</vbox>
 				<label>
 					<text>"  "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 
 	<vbox>
 		<button>
 			<halpin>"set-neg-z"</halpin>
 			<text>" -Z"</text>
-			<font>("Helvetica",14)</font>
+			<font>("Helvetica",12)</font>
 			<justify>"center"</justify>
 		</button>
 	</vbox>
@@ -330,7 +330,7 @@
 		<vbox>
 				<label>
 					<text>"            Jog Speed    "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 		</vbox>	
 
@@ -342,7 +342,7 @@
 		<button>
 			<halpin>"set-pos-x"</halpin>
 			<text>"+X"</text>
-			<font>("Helvetica",14)</font>
+			<font>("Helvetica",12)</font>
 			<justify>"center"</justify>
 		</button>
 	</vbox>
@@ -356,7 +356,7 @@
 
 			<label>
 					<text>" "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 
 
@@ -364,7 +364,7 @@
 			<button>
 				<halpin>"set-neg-x"</halpin>
 				<text>" -X"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 			</button>
 		</vbox>
@@ -372,7 +372,7 @@
 		<vbox>
 				<label>
 					<text>"          "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 		</vbox>	
 
@@ -404,20 +404,20 @@
 		<button>
 		<halpin>"set-pos-z"</halpin>
 		<text>" +Z"</text>
-		<font>("Helvetica",14)</font>
+		<font>("Helvetica",12)</font>
 		<justify>"center"</justify>
 		</button>
 	</vbox>
 
 				<label>
 					<text>"    "</text>
-					<font>("Helvetica",14)</font>			
+					<font>("Helvetica",12)</font>			
 				</label>
 	<vbox>
 		<button>
 		<halpin>"set-pos-y"</halpin>
 		<text>"+Y"</text>
-		<font>("Helvetica",14)</font>
+		<font>("Helvetica",12)</font>
 		<justify>"center"</justify>
 		</button>
 	</vbox>
@@ -445,32 +445,96 @@
 				</label>
 
 				<button>
-				<halpin>"set0"</halpin>
+				<halpin>"spindle_empty"</halpin>
 				<text>" Spindle_empty"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",10)</font>
 				<justify>"center"</justify>
 				</button>
 
 				<button>
-				<halpin>"set"</halpin>
+				<halpin>"tool_1"</halpin>
 				<text>" Tool_1"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 				</button>
 
 				<button>
-				<halpin>"set1"</halpin>
+				<halpin>"tool_2"</halpin>
 				<text>" Tool_2"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 				</button>
 
 				<button>
-				<halpin>"set2"</halpin>
+				<halpin>"tool_3"</halpin>
 				<text>" Tool_3"</text>
-				<font>("Helvetica",14)</font>
+				<font>("Helvetica",12)</font>
 				<justify>"center"</justify>
 				</button>
+			</vbox>
+			<vbox>
+				<label>
+				    <text>"Set-Tool"</text>
+				</label>
+
+				<button>
+				<halpin>"set_spindle_empty"</halpin>
+				<text>"Add_empty"</text>
+				<font>("Helvetica",12)</font>
+				<justify>"center"</justify>
+				</button>
+
+				<button>
+				<halpin>"set_tool_1"</halpin>
+				<text>"Add_Tool_1"</text>
+				<font>("Helvetica",12)</font>
+				<justify>"center"</justify>
+				</button>
+
+				<button>
+				<halpin>"set_tool_2"</halpin>
+				<text>"Add_Tool_2"</text>
+				<font>("Helvetica",12)</font>
+				<justify>"center"</justify>
+				</button>
+
+				<button>
+				<halpin>"set_tool_3"</halpin>
+				<text>"Add_Tool_3"</text>
+				<font>("Helvetica",12)</font>
+				<justify>"center"</justify>
+				</button>
+			</vbox>
+			<vbox>
+				<label>
+				    <text>"Set-Tool"</text>
+				</label>
+					<hbox>
+						<button>
+						<halpin>"set"</halpin>
+						<text>"Add"</text>
+						<font>("Helvetica",12)</font>
+						<justify>"center"</justify>
+						</button>
+					</hbox>
+					<hbox>
+						<button>
+						<halpin>"set2"</halpin>
+						<text>"Add"</text>
+						<font>("Helvetica",12)</font>
+						<justify>"center"</justify>
+						</button>
+					</hbox>
+					<hbox>
+						<button>
+						<halpin>"set3"</halpin>
+						<text>"Add"</text>
+						<font>("Helvetica",8)</font>
+						<justify>"center"</justify>
+						<bd>1</bd>
+						</button>
+					</hbox>
+
 			</vbox>
 		</hbox>
 </vbox>
