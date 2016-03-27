@@ -507,34 +507,43 @@
 			</vbox>
 			<vbox>
 				<label>
-				    <text>"Set-Tool"</text>
+				   <text>"air pressure"</text>
+					<font>("Helvetica",11)</font>
 				</label>
 					<hbox>
 						<button>
 						<halpin>"set"</halpin>
-						<text>"Add"</text>
-						<font>("Helvetica",12)</font>
+						<text>"close_collet"</text>
+						<font>("Helvetica",11)</font>
 						<justify>"center"</justify>
 						</button>
 					</hbox>
 					<hbox>
 						<button>
 						<halpin>"set2"</halpin>
-						<text>"Add"</text>
-						<font>("Helvetica",12)</font>
+						<text>"open_collet"</text>
+						<font>("Helvetica",11)</font>
 						<justify>"center"</justify>
 						</button>
 					</hbox>
 					<hbox>
 						<button>
 						<halpin>"set3"</halpin>
-						<text>"Add"</text>
-						<font>("Helvetica",8)</font>
+						<text>" clean_air "</text>
+						<font>("Helvetica",12)</font>
 						<justify>"center"</justify>
-						<bd>1</bd>
+						<bd>2</bd>
 						</button>
 					</hbox>
-
+					<hbox>
+						<button>
+						<halpin>"se"</halpin>
+						<text>" -----  "</text>
+						<font>("Helvetica",12)</font>
+						<justify>"center"</justify>
+						<bd>2</bd>
+						</button>
+					</hbox>
 			</vbox>
 		</hbox>
 </vbox>
@@ -548,26 +557,10 @@
 
 
 
-
 <labelframe text="Funktions Button">
-
-
-
-
-
 
 </labelframe>
 
 </vbox>
-
-
-
-
-
-
-
-
-
-
 
 </pyvcp>
