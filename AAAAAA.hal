@@ -1,0 +1,96 @@
+
+loadrt trivkins
+loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[TRAJ]AXES
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+net estop-out <= iocontrol.0.user-enable-out
+net estop-out => iocontrol.0.emc-enable-in
+
+########################################################################################################################
+
+loadrt stepgen step_type=0,0,0,0
+addf stepgen.make-pulses base-thread
+addf stepgen.capture-position servo-thread
+addf stepgen.update-freq servo-thread
+
+
+#loadusr -W ./puma5gui
+
+##############################################################################
+
+setp stepgen.3.position-scale [AXIS_3]SCALE
+setp stepgen.3.steplen 1
+setp stepgen.3.stepspace 4000
+setp stepgen.3.dirhold 4000
+setp stepgen.3.dirsetup 500
+setp stepgen.3.maxaccel [AXIS_3]STEPGEN_MAXACCEL
+net apos-cmd axis.3.motor-pos-cmd => stepgen.3.position-cmd
+net apos-fb stepgen.3.position-fb => axis.3.motor-pos-fb
+net astep <= stepgen.3.step
+net adir <= stepgen.3.dir
+net aenable axis.3.amp-enable-out => stepgen.3.enable
+net min-home-a => axis.3.home-sw-in
+net min-home-a => axis.3.neg-lim-sw-in
+
+######################
+net MDI-mode              halui.mode.is-mdi
+
+net set0		halui.mdi-command-00 <= pyvcp.Spindle_empty
+
+################################################################################
+
+loadrt hal_parport cfg="0xc050"
+setp parport.0.reset-time 500
+addf parport.0.read base-thread
+addf parport.0.write base-thread
+addf parport.0.reset base-thread
+
+net astep           => parport.0.pin-02-out
+setp parport.0.pin-02-out-reset 1
+
+net adir            => parport.0.pin-01-out
+net aenable         => parport.0.pin-05-out
+
+
+#net estop-out       => parport.0.pin-01-out
+
+#net xstep           => parport.0.pin-02-out
+#setp parport.0.pin-02-out-reset 1
+#net xdir            => parport.0.pin-03-out
+#net ystep           => parport.0.pin-04-out
+#setp parport.0.pin-04-out-reset 1
+#net ydir            => parport.0.pin-05-out
+#net zstep           => parport.0.pin-06-out
+#setp parport.0.pin-06-out-reset 1
+#net zdir            => parport.0.pin-07-out
+#net spindle-cw      => parport.0.pin-14-out
+#net spindle-pwm     => parport.0.pin-16-out
+#net min-home-x      <= parport.0.pin-10-in
+#net min-home-y      <= parport.0.pin-11-in
+#net min-home-z      <= parport.0.pin-12-in
+#net min-home-a      <= parport.0.pin-13-in
+
+############################################################################################
+
+
+#loadrt pwmgen output_type=1
+#addf pwmgen.make-pulses base-thread
+#addf pwmgen.update servo-thread
+
+
+#net spindle-cmd-rpm => pwmgen.0.value
+#net spindle-on <= motion.spindle-on => pwmgen.0.enable
+#net spindle-pwm <= pwmgen.0.pwm
+
+#setp pwmgen.0.pwm-freq 100.0
+#setp pwmgen.0.scale 1166.6
+#setp pwmgen.0.offset 0.114
+#setp pwmgen.0.dither-pwm true
+
+#net spindle-cmd-rpm     <= motion.spindle-speed-out
+#net spindle-cmd-rpm-abs <= motion.spindle-speed-out-abs
+#net spindle-cmd-rps     <= motion.spindle-speed-out-rps
+#net spindle-cmd-rps-abs <= motion.spindle-speed-out-rps-abs
+net spindle-at-speed    => motion.spindle-at-speed
+#net spindle-cw <= motion.spindle-forward
+
